@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :root {
   --color-primary: #4D27C7;
   --color-secondary: #21A8F3;
@@ -17,23 +16,3 @@
     --color-text-dark: #4A5568;
   }
 }
-=======
-:root {
-  --color-primary: #4D27C7;
-  --color-secondary: #21A8F3;
-  --color-accent: #20D9D2;
-  --color-background: #F9FAFC;
-  --color-surface: #F0F4F9;
-  --color-text: #4A5568;
-  --color-text-dark: #E6EDF3;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: #121826;
-    --color-surface: #1E293B;
-    --color-text: #E6EDF3;
-    --color-text-dark: #4A5568;
-  }
-}
->>>>>>> 9118f070158da87ce42521e3257c6926681040c9
