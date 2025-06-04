@@ -13,20 +13,6 @@ const Footer = () => {
   return (
     <footer className="w-full bg-white/80 dark:bg-surface-dark/80 backdrop-blur-md border-t border-gray-200 dark:border-gray-700 py-6 mt-auto">
       <div className="container mx-auto flex flex-col items-center justify-center gap-4 px-4">
-        <div className="flex gap-4">
-          {SOCIALS.map((social) => (
-            <a
-              key={social.label}
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={social.label}
-              className="text-text/70 dark:text-text-dark/70 hover:text-primary dark:hover:text-primary transition-colors"
-            >
-              {social.icon}
-            </a>
-          ))}
-        </div>
         <div className="text-center text-sm text-text/70 dark:text-text-dark/70">
           <p>evan.saboulard-serre@etu.univ-lyon1.fr</p>
           <p>07 81 78 51 49</p>
