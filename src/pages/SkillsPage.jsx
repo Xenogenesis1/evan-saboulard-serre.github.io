@@ -38,6 +38,7 @@ const SkillsPage = () => {
                   </h3>
                   <p className="text-text/70 dark:text-text-dark/70 mb-4">{category.description}</p>
                 </div>
+
                 {/* Liens avec le référentiel national */}
                 {category.sousCompetencesNationales && (
                   <div className="mb-2">
@@ -49,23 +50,55 @@ const SkillsPage = () => {
                     </ul>
                   </div>
                 )}
+
                 {/* Composantes du référentiel */}
                 <div className="bg-primary/5 dark:bg-primary/10 rounded-lg p-4 mb-4">
                   <h3 className="text-sm font-semibold text-primary mb-2">
                     Composantes essentielles
                   </h3>
-                  <ul className="list-disc pl-5 mt-1 text-xs text-text/80 dark:text-text-dark/80">
-                    {category.skills.map((skill) => (
-                      <li key={skill.id}>{skill.name}</li>
+                  <ul className="list-disc pl-4 text-sm space-y-1 text-text/80 dark:text-text-dark/80">
+                    {category.composantes.map((comp, index) => (
+                      <li key={index}>{comp}</li>
                     ))}
                   </ul>
                 </div>
-                <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill) => (
-                    <Badge key={skill.id} color={skill.color} variant="default" className="text-sm">
-                      {skill.name}
-                    </Badge>
-                  ))}
+
+                {/* Compétences techniques détaillées */}
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-3">
+                    Compétences techniques détaillées
+                  </h3>
+                  <div className="space-y-4">
+                    {category.skills.map((skill) => (
+                      <div key={skill.id} className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4">
+                        <div className="flex items-center justify-between mb-2">
+                          <h4 className="font-medium text-gray-900 dark:text-gray-100">
+                            {skill.name}
+                          </h4>
+                          <Badge color={skill.color}>
+                            Niveau {skill.level}%
+                          </Badge>
+                        </div>
+                        <p className="text-sm text-text/70 dark:text-text-dark/70 mb-2">
+                          {skill.description}
+                        </p>
+                        {skill.projects && skill.projects.length > 0 && (
+                          <div className="flex flex-wrap gap-2">
+                            {skill.projects.map((project) => (
+                              <Badge
+                                key={project}
+                                color="secondary"
+                                variant="outline"
+                                className="text-xs"
+                              >
+                                {project}
+                              </Badge>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </Card>
             ))}
@@ -81,9 +114,16 @@ const SkillsPage = () => {
                 <div>
                   <h3 className="text-xl font-heading font-semibold mb-2 text-primary flex items-center gap-2">
                     {category.name}
+                    {category.isPersonalProject && (
+                      <Badge color="accent" variant="outline" className="text-xs">
+                        Compétence personnelle
+                      </Badge>
+                    )}
                   </h3>
                   <p className="text-text/70 dark:text-text-dark/70 mb-4">{category.description}</p>
                 </div>
+
+                {/* Liens avec le référentiel national */}
                 {category.sousCompetencesNationales && (
                   <div className="mb-2">
                     <span className="text-xs font-semibold text-primary">Liens avec le référentiel national :</span>
@@ -94,12 +134,55 @@ const SkillsPage = () => {
                     </ul>
                   </div>
                 )}
-                <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill) => (
-                    <Badge key={skill.id} color={skill.color} variant="default" className="text-sm">
-                      {skill.name}
-                    </Badge>
-                  ))}
+
+                {/* Composantes du référentiel */}
+                <div className="bg-primary/5 dark:bg-primary/10 rounded-lg p-4 mb-4">
+                  <h3 className="text-sm font-semibold text-primary mb-2">
+                    Composantes essentielles
+                  </h3>
+                  <ul className="list-disc pl-4 text-sm space-y-1 text-text/80 dark:text-text-dark/80">
+                    {category.composantes.map((comp, index) => (
+                      <li key={index}>{comp}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Compétences techniques détaillées */}
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-3">
+                    Compétences techniques détaillées
+                  </h3>
+                  <div className="space-y-4">
+                    {category.skills.map((skill) => (
+                      <div key={skill.id} className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4">
+                        <div className="flex items-center justify-between mb-2">
+                          <h4 className="font-medium text-gray-900 dark:text-gray-100">
+                            {skill.name}
+                          </h4>
+                          <Badge color={skill.color}>
+                            Niveau {skill.level}%
+                          </Badge>
+                        </div>
+                        <p className="text-sm text-text/70 dark:text-text-dark/70 mb-2">
+                          {skill.description}
+                        </p>
+                        {skill.projects && skill.projects.length > 0 && (
+                          <div className="flex flex-wrap gap-2">
+                            {skill.projects.map((project) => (
+                              <Badge
+                                key={project}
+                                color="secondary"
+                                variant="outline"
+                                className="text-xs"
+                              >
+                                {project}
+                              </Badge>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </Card>
             ))}
