@@ -77,8 +77,8 @@ function App() {
             </Routes>
           </AnimatePresence>
         </main>
+        <Footer />
       </div>
-      <Footer />
     </ErrorBoundary>
   );
 }
