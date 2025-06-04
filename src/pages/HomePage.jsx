@@ -5,6 +5,7 @@ import projects from '../data/projects';
 import ProjectCard from '../components/projects/ProjectCard';
 import skills from '../data/skills';
 import Badge from '../components/ui/Badge';
+import { Link } from 'react-router-dom';
 
 // Animation d'apparition pour les sections
 const sectionVariants = {
@@ -58,9 +59,9 @@ const HomePage = () => {
           </div>
         </div>
         <div className="mt-8 text-center">
-          <a href="/projets" className="inline-block bg-primary hover:bg-primary-dark text-white font-medium py-2 px-6 rounded-xl transition-colors shadow-button focus:outline-none focus:ring-2 focus:ring-primary/50">
+          <Link to="/projets" className="inline-block bg-primary hover:bg-primary-dark text-white font-medium py-2 px-6 rounded-xl transition-colors shadow-button focus:outline-none focus:ring-2 focus:ring-primary/50">
             Voir tous les projets
-          </a>
+          </Link>
         </div>
       </motion.section>
 
@@ -142,9 +143,9 @@ const HomePage = () => {
           </div>
         </div>
         <div className="mt-8 text-center">
-          <a href="/competences" className="inline-block bg-primary hover:bg-primary-dark text-white font-medium py-2 px-6 rounded-xl transition-colors shadow-button focus:outline-none focus:ring-2 focus:ring-primary/50">
+          <Link to="/competences" className="inline-block bg-primary hover:bg-primary-dark text-white font-medium py-2 px-6 rounded-xl transition-colors shadow-button focus:outline-none focus:ring-2 focus:ring-primary/50">
             Voir toutes les compétences
-          </a>
+          </Link>
         </div>
       </motion.section>
     </div>

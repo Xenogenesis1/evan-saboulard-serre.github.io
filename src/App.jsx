@@ -16,6 +16,9 @@ import ExperiencePage from './pages/ExperiencePage';
 // Import du composant Navbar
 import Navbar from './components/ui/Navbar';
 
+// Import du composant Footer
+import Footer from './components/ui/Footer';
+
 // ErrorBoundary pour capturer les erreurs de rendu
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -75,6 +78,7 @@ function App() {
           </AnimatePresence>
         </main>
       </div>
+      <Footer />
     </ErrorBoundary>
   );
 }
