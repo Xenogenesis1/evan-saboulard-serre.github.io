@@ -43,10 +43,10 @@ const skills = [
       {
         id: 'scripting',
         name: 'Scripts & Automatisation',
-        level: 75,
+        level: 20,
         color: 'accent',
-        description: 'AutoHotKey, PowerShell, Pine Script pour l\'automatisation.',
-        projects: ['scripts-trading', 'auto-tasks'],
+        description: 'PowerShell.',
+        projects: ['auto-tasks'],
       },
       {
         id: 'web-frontend',
@@ -264,14 +264,14 @@ const skills = [
     composantes: [
       'Analyse et traitement de données financières',
       'Développement de modèles prédictifs',
-      'Optimisation de stratégies d\'investissement',
+      'Conception, optimisation, et évaluation de stratégies de trading',
       'Gestion des risques et validation de modèles'
     ],
     sousCompetencesNationales: [
       { id: 'realiser', label: 'Réaliser', description: 'Développement d’outils et d’algorithmes pour l’analyse financière.' },
       { id: 'optimiser', label: 'Optimiser', description: 'Optimisation de stratégies d’investissement et de modèles quantitatifs.' },
       { id: 'administrer', label: 'Administrer', description: 'Gestion et sécurisation des données financières.' },
-      { id: 'gerer', label: 'Gérer', description: 'Gestion des risques et validation des résultats financiers.' }
+      { id: 'gerer', label: 'Gérer', description: 'Gestion des risques et évaluation/validation des résultats.' }
     ],
     skills: [
       {
@@ -285,9 +285,9 @@ const skills = [
       {
         id: 'ml-models',
         name: 'Modèles d\'apprentissage',
-        level: 50,
+        level: 65,
         color: 'secondary',
-        description: 'Réseaux de neurones et techniques de ML avancées.',
+        description: 'Réseaux de neurones ( moins pertinant pour le moment ).',
         projects: ['trading-algo'],
       },
       {
@@ -319,15 +319,15 @@ const skills = [
         name: 'Analyse de séries temporelles multi-échelles',
         level: 75,
         color: 'accent',
-        description: 'Analyse quantitative de séries temporelles financières sur plusieurs granularités.',
+        description: 'Analyse quantitative de séries temporelles sur plusieurs granularités ( timeframes ).',
         projects: ['optimisation-genetique-ict', 'optimisation-trading-pso', 'trading-algo-automatisation'],
       },
       {
         id: 'software-architecture-finance',
-        name: 'Architecture logicielle pour systèmes financiers',
+        name: 'Architecture logicielle pour systèmes de trading',
         level: 80,
         color: 'primary',
-        description: 'Conception d’architectures robustes et modulaires pour l’automatisation et l’analyse financière.',
+        description: 'Conception d’architectures robustes et modulaires pour l’automatisation et l’analyse de stratégies.',
         projects: ['optimisation-genetique-ict', 'optimisation-trading-pso', 'trading-algo-automatisation'],
       }
     ]
