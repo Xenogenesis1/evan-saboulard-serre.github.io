@@ -19,7 +19,7 @@ const skills = [
       {
         id: 'c-prog',
         name: 'C',
-        level: 85,
+        level: 50,
         color: 'danger',
         description: 'Programmation système et développement bas niveau.',
         projects: ['gestion-aeroport-c'],
